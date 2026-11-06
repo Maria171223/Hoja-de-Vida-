@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoja de Vida · María Acuña</title>
+  <!-- Fuentes de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome para los iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="cv-contenedor">
+    
+    <!-- Columna Izquierda / Barra Lateral -->
+    <aside class="barra-lateral">
+      <div class="foto-perfil-contenedor">
+        <img src="Mi perfil profesional.jpg" alt="Foto de perfil de María Acuña" class="foto-perfil" id="foto-perfil">
+      </div>
+
+      <div class="datos-personales">
+        <p><strong>Fecha de nacimiento:</strong> 17/12/2007</p>
+        <p><strong>Edad:</strong> 18 años</p>
+        <p><strong>Nacionalidad:</strong> Colombiana</p>
+      </div>
+
+      <section class="seccion-lateral contacto">
+        <h2><i class="fa-solid fa-user-circle"></i> CONTACTO</h2>
+        <ul class="lista-contacto">
+          <li><span class="icono-circulo"><i class="fa-solid fa-phone"></i></span> (57) 311 877 48 31</li>
+          <li><span class="icono-circulo"><i class="fa-solid fa-envelope"></i></span> mariaacuna495715@gmail.com</li>
+          <li><span class="icono-circulo"><i class="fa-solid fa-comment-dots"></i></span> @MaraAcua3</li>
+          <li><span class="icono-circulo"><i class="fa-solid fa-location-dot"></i></span> Caucasia, Antioquia</li>
+        </ul>
+      </section>
+
+      <section class="seccion-lateral idiomas">
+        <h2><i class="fa-solid fa-globe"></i> IDIOMAS</h2>
+        <p class="texto-idioma">Español (Nativo)</p>
+      </section>
+
+      <section class="seccion-lateral habilidades">
+        <h2><i class="fa-solid fa-gears"></i> HABILIDADES</h2>
+        <ul id="lista-habilidades" class="lista-habilidades">
+          <!-- Se carga dinámicamente o con app.js -->
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Columna Principal / Contenido -->
+    <main class="contenido-principal">
+      <header class="encabezado-perfil">
+        <h1>MARÍA ACUÑA</h1>
+        <p class="subtitulo">ESTUDIANTE DE INGENIERÍA DE SISTEMAS</p>
+      </header>
+
+      <section class="seccion-principal sobre-mi">
+        <h2>SOBRE MÍ</h2>
+        <p>
+          Soy estudiante de cuarto semestre de Ingeniería de Sistemas, interesada en la tecnología, 
+          la programación y el desarrollo de soluciones informáticas. Me considero una persona responsable, 
+          creativa, comprometida y con disposición para aprender. Tengo facilidad para trabajar en equipo, 
+          adaptarme a nuevos retos y adquirir conocimientos. Busco fortalecer mis habilidades y crecer 
+          profesionalmente en el área tecnológica.
+        </p>
+      </section>
+
+      <section class="seccion-principal educacion">
+        <h2><i class="fa-solid fa-graduation-cap"></i> FORMACIÓN ACADÉMICA</h2>
+        <article class="item-educacion">
+          <h3>CORPORACIÓN UNIVERSITARIA REMINGTON</h3>
+          <p class="carrera">Ingeniería de Sistemas</p>
+          <p class="fecha">2025 - Actualmente</p>
+          <p class="estado">Cuarto semestre en curso</p>
+        </article>
+      </section>
+
+      <section class="seccion-principal complementaria">
+        <h2><i class="fa-solid fa-arrows-rotate"></i> FORMACIÓN COMPLEMENTARIA</h2>
+        <article class="item-educacion">
+          <h3>SERVICIO NACIONAL DE APRENDIZAJE (SENA)</h3>
+          <p class="carrera">Técnico en Sistemas</p>
+          <p class="fecha">[2023 – 2024]</p>
+        </article>
+      </section>
+
+      <!-- Sección de Enviar Mensaje Integrada -->
+      <section class="seccion-principal contacto-form">
+        <h2><i class="fa-solid fa-paper-plane"></i> ENVIAR MENSAJE</h2>
+        <form id="form-contacto" data-url="https://formspree.io/f/xwlljvdp">
+          <div class="grupo-campo">
+            <label for="nombre-remitente">Su Nombre <span class="obligatorio">*</span></label>
+            <input type="text" id="nombre-remitente" name="nombre" required minlength="3" placeholder="Ej. Ana Pérez">
+          </div>
+          <div class="grupo-campo">
+            <label for="email-remitente">Su Correo <span class="obligatorio">*</span></label>
+            <input type="email" id="email-remitente" name="email" required placeholder="correo@ejemplo.com">
+          </div>
+          <div class="grupo-campo">
+            <label for="mensaje-remitente">Mensaje <span class="obligatorio">*</span></label>
+            <textarea id="mensaje-remitente" name="mensaje" rows="3" required placeholder="Escriba su mensaje..."></textarea>
+          </div>
+          
+          <div class="acciones-form">
+            <button type="submit" class="btn btn-primario">Enviar Mensaje</button>
+            <button type="button" id="btn-tema" class="btn btn-secundario">🌓 Cambiar Modo</button>
+            <button type="button" id="btn-imprimir" class="btn btn-secundario">📄 Imprimir PDF</button>
+          </div>
+        </form>
+        <p id="mensaje-respuesta" class="mensaje-respuesta" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>

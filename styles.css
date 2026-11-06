@@ -1,0 +1,409 @@
+/* ===== Variables Paleta Morada Canva ===== */
+:root {
+  --morado-oscuro: #4A1E4A;
+  --morado-titulo: #5C1D5C;
+  --morado-icono: #6B306B;
+  --lila-fondo: #E6DAEC;
+  --lila-tarjeta: #F4EDF6;
+  --blanco: #FFFFFF;
+  --texto-oscuro: #2D233E;
+  --texto-suave: #555555;
+  --verde-exito: #0F7B3F;
+  --rojo-error: #E3001B;
+  --sombra: 0 10px 25px rgba(74, 30, 74, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #D3C3DB;
+  color: var(--texto-oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Lienzo de la Hoja de Vida */
+.cv-contenedor {
+  width: 100%;
+  max-width: 880px;
+  background: var(--blanco);
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+/* Decoraciones Orgánicas en Esquinas */
+.cv-contenedor::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 140px;
+  height: 140px;
+  border: 10px solid #CDBAD7;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cv-contenedor::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+  width: 200px;
+  height: 130px;
+  background-color: var(--morado-titulo);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  pointer-events: none;
+}
+
+/* Sidebar Curvo */
+.barra-lateral {
+  background-color: var(--lila-fondo);
+  padding: 2.2rem 1.5rem;
+  border-radius: 0 40% 15% 0 / 0 12% 8% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 1;
+}
+
+.foto-perfil-contenedor {
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--morado-oscuro);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.datos-personales {
+  background: var(--lila-tarjeta);
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--texto-oscuro);
+}
+
+.seccion-lateral h2 {
+  font-size: 1.05rem;
+  color: var(--morado-titulo);
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seccion-lateral h2 i {
+  color: var(--morado-icono);
+  font-size: 1.1rem;
+}
+
+.lista-contacto {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lista-contacto li {
+  font-size: 0.83rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--texto-oscuro);
+}
+
+.icono-circulo {
+  width: 28px;
+  height: 28px;
+  background-color: var(--lila-tarjeta);
+  color: var(--morado-icono);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.texto-idioma {
+  font-size: 0.85rem;
+  padding-left: 5px;
+}
+
+.lista-habilidades {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.lista-habilidades li {
+  font-size: 0.83rem;
+  margin-bottom: 0.35rem;
+  color: var(--texto-oscuro);
+}
+
+/* Columna Principal */
+.contenido-principal {
+  padding: 2.5rem 2rem;
+  z-index: 1;
+}
+
+.encabezado-perfil h1 {
+  font-size: 2.5rem;
+  color: var(--morado-titulo);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.subtitulo {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--morado-titulo);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.seccion-principal {
+  margin-bottom: 1.5rem;
+}
+
+.seccion-principal h2 {
+  font-size: 1.1rem;
+  color: var(--morado-titulo);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seccion-principal h2 i {
+  color: var(--morado-icono);
+  font-size: 1.05rem;
+}
+
+.seccion-principal p {
+  font-size: 0.84rem;
+  color: #444444;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.item-educacion {
+  margin-top: 0.4rem;
+}
+
+.item-educacion h3 {
+  font-size: 0.92rem;
+  color: var(--morado-titulo);
+  font-weight: 700;
+}
+
+.item-educacion .carrera {
+  font-size: 0.85rem;
+  color: var(--texto-oscuro);
+  font-weight: 500;
+}
+
+.item-educacion .fecha, .item-educacion .estado {
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+}
+
+/* Estilos del Formulario de Contacto */
+#form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.grupo-campo label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--morado-titulo);
+}
+
+.obligatorio {
+  color: var(--rojo-error);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  background-color: var(--lila-tarjeta);
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--morado-icono);
+  background-color: var(--blanco);
+}
+
+.acciones-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primario {
+  background-color: var(--morado-oscuro);
+  color: var(--blanco);
+}
+
+.btn-primario:hover {
+  background-color: var(--morado-titulo);
+}
+
+.btn-secundario {
+  background-color: var(--lila-fondo);
+  color: var(--morado-titulo);
+}
+
+.btn-secundario:hover {
+  background-color: #D6C4E0;
+}
+
+.mensaje-respuesta {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+
+.mensaje-respuesta.ok {
+  color: var(--verde-exito);
+}
+
+.mensaje-respuesta.error {
+  color: var(--rojo-error);
+}
+
+/* Ocultar formulario al imprimir */
+@media print {
+  body {
+    background: none;
+    padding: 0;
+  }
+  .cv-contenedor {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+  .contacto-form {
+    display: none !important;
+  }
+}
+/* ===== Estilos para Modo Oscuro ===== */
+body.modo-oscuro {
+  background-color: #1E1726;
+  color: #E2D9EC;
+}
+
+body.modo-oscuro .cv-contenedor {
+  background-color: #261D30;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.modo-oscuro .barra-lateral {
+  background-color: #362845;
+}
+
+body.modo-oscuro .datos-personales,
+body.modo-oscuro .icono-circulo,
+body.modo-oscuro input,
+body.modo-oscuro textarea {
+  background-color: #2D213B;
+  color: #E2D9EC;
+  border-color: #4C3961;
+}
+
+body.modo-oscuro input:focus,
+body.modo-oscuro textarea:focus {
+  background-color: #382A4A;
+}
+
+body.modo-oscuro h1,
+body.modo-oscuro .seccion-principal h2,
+body.modo-oscuro .seccion-lateral h2,
+body.modo-oscuro .item-educacion h3,
+body.modo-oscuro .grupo-campo label {
+  color: #D8B2E6;
+}
+
+body.modo-oscuro .seccion-principal h2 i,
+body.modo-oscuro .seccion-lateral h2 i,
+body.modo-oscuro .icono-circulo {
+  color: #C58EE0;
+}
+
+body.modo-oscuro .subtitulo,
+body.modo-oscuro .carrera,
+body.modo-oscuro .lista-contacto li,
+body.modo-oscuro .lista-habilidades li,
+body.modo-oscuro .texto-idioma {
+  color: #F0E6F7;
+}
+
+body.modo-oscuro .seccion-principal p,
+body.modo-oscuro .item-educacion .fecha,
+body.modo-oscuro .item-educacion .estado {
+  color: #CBBBD8;
+}
+
+body.modo-oscuro .btn-secundario {
+  background-color: #3D2D4F;
+  color: #D8B2E6;
+}
+
+body.modo-oscuro .btn-secundario:hover {
+  background-color: #4C3963;
+}
